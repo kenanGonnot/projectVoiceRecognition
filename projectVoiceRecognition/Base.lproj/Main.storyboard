@@ -39,6 +39,9 @@
                             <constraint firstItem="dD8-He-Av3" firstAttribute="top" secondItem="VbV-ta-xYS" secondAttribute="bottom" constant="57" id="z7f-3E-jYw"/>
                         </constraints>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
