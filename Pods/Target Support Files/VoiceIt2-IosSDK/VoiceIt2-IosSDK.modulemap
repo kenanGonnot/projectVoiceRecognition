@@ -1,0 +1,6 @@
+framework module VoiceIt2_IosSDK {
+  umbrella header "VoiceIt2-IosSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

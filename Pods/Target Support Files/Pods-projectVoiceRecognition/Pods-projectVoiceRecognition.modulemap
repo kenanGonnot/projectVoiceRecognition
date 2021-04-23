@@ -1,0 +1,6 @@
+framework module Pods_projectVoiceRecognition {
+  umbrella header "Pods-projectVoiceRecognition-umbrella.h"
+
+  export *
+  module * { export * }
+}
