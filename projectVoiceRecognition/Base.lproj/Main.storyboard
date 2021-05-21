@@ -54,6 +54,9 @@
                                 <state key="normal" title="Inscrivez-vous">
                                     <color key="titleColor" systemColor="systemGray5Color"/>
                                 </state>
+                                <connections>
+                                    <action selector="enrollment" destination="87B-pq-mmE" eventType="primaryActionTriggered" id="32f-3J-tk1"/>
+                                </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4A-3q-lfa">
                                 <rect key="frame" x="87" y="742" width="240" height="3"/>
@@ -85,6 +88,9 @@
                                 <state key="normal" title="Connexion">
                                     <color key="titleColor" systemColor="systemBlueColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="verification" destination="87B-pq-mmE" eventType="primaryActionTriggered" id="IXV-o4-3Bh"/>
+                                </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgo-LX-zRi">
                                 <rect key="frame" x="20" y="447" width="109" height="3"/>

@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var inscriptionButton: UIButton!
 
 
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +46,7 @@ class ViewController: UIViewController {
     // MARK : Actions
 
     
+    
     @IBAction func enrollment(){
         print("hello")
         myVoiceIt?.encapsulatedVoiceEnrollUser(userId, contentLanguage: language, voicePrintPhrase: phrase, userEnrollmentsCancelled: {
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         })
     }
     
-    @IBAction func verify(){
+    @IBAction func verification(){
         myVoiceIt?.encapsulatedVoiceVerification(userId, contentLanguage: language, voicePrintPhrase: phrase, userVerificationCancelled: {
             print("User Cancelled Verification");
         }, userVerificationSuccessful: {(voiceConfidence, jsonResponse) in
@@ -66,6 +66,27 @@ class ViewController: UIViewController {
         })
     }
 
+
+    @IBAction func create_user(){
+        myVoiceIt?.createUser({
+            jsonResponse in
+            print("JSON RESPONSE: \(jsonResponse!)")
+        })
+    }
+    
+    @IBAction func create_group(){
+        myVoiceIt?.createGroup("Groupe ESME", callback: {
+            jsonResponse in
+        })
+    }
+    
+    @IBAction func add_usr_to_grp(usr_:String , grp_:String){
+        myVoiceIt?.addUser(toGroup: grp_, userId: usr_, callback: {
+            jsonResponse in
+            print("JSON RESPONSE: \(jsonResponse!)")
+        })
+    }
+    
     
     //        myVoiceIt?.encapsulatedVoiceVerification(userId, contentLanguage: language, voicePrintPhrase: phrase, userVerificationCancelled: {
     //            print("User Cancelled Verification");
