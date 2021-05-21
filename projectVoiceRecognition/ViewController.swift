@@ -19,15 +19,33 @@ class ViewController: UIViewController {
     let phrase = "hello i am very happy today";
     let userId = "usr_9f4b211a85b24b0886ffdc82b8f54bf9";
     
+    // MARK: Outelts
+    
+    @IBOutlet weak var connexionButton: UIButton!
+    @IBOutlet weak var inscriptionButton: UIButton!
+
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupButtons()
+
         // Do any additional setup after loading the view.
         /* Reference to ViewController , API Credentials and styles dictionary*/
         let styles = NSMutableDictionary(dictionary: ["kThemeColor":"#FBC132","kIconStyle":"default"])
         self.myVoiceIt = VoiceItAPITwo(self, apiKey: API_KEY, apiToken: API_TOK, styles: styles)
     }
     
+    
+    // MARK : Private functions
+    private func setupButtons() {
+        connexionButton.layer.cornerRadius = 20
+    
+    }
+    
+    // MARK : Actions
+
     
     @IBAction func enrollment(){
         print("hello")
