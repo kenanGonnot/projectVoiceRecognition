@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		162AD6D62F95C23F08FBA438 /* Pods_projectVoiceRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66611D235B5DC1A91967FCB4 /* Pods_projectVoiceRecognition.framework */; };
+		6E1BA573265A86F9007155B9 /* ConnectedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E1BA572265A86F9007155B9 /* ConnectedView.xib */; };
 		6E7061E4261270DB00B0CCE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7061E3261270DB00B0CCE5 /* AppDelegate.swift */; };
 		6E7061E6261270DB00B0CCE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7061E5261270DB00B0CCE5 /* SceneDelegate.swift */; };
 		6E7061E8261270DB00B0CCE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7061E7261270DB00B0CCE5 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		66611D235B5DC1A91967FCB4 /* Pods_projectVoiceRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_projectVoiceRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E1BA572265A86F9007155B9 /* ConnectedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectedView.xib; sourceTree = "<group>"; };
 		6E7061E0261270DB00B0CCE5 /* projectVoiceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectVoiceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7061E3261270DB00B0CCE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E7061E5261270DB00B0CCE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				6E7061E5261270DB00B0CCE5 /* SceneDelegate.swift */,
 				6E7061E7261270DB00B0CCE5 /* ViewController.swift */,
 				6E7061E9261270DB00B0CCE5 /* Main.storyboard */,
+				6E1BA572265A86F9007155B9 /* ConnectedView.xib */,
 				6E7061EC261270DC00B0CCE5 /* Assets.xcassets */,
 				6E7061F1261270DC00B0CCE5 /* Info.plist */,
 			);
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E7061ED261270DC00B0CCE5 /* Assets.xcassets in Resources */,
+				6E1BA573265A86F9007155B9 /* ConnectedView.xib in Resources */,
 				6E7061EB261270DB00B0CCE5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

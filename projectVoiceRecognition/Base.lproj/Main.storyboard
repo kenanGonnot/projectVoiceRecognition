@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -140,7 +141,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9WJ-kT-TAc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
+            <point key="canvasLocation" x="-591" y="68"/>
+        </scene>
+        <!--View Connected-->
+        <scene sceneID="SOg-3g-RT1">
+            <objects>
+                <viewController title="View Controller" id="xnl-ag-s53" userLabel="View Connected" customClass="ViewController" customModule="projectVoiceRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y2X-ti-aK3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="F" translatesAutoresizingMaskIntoConstraints="NO" id="cEV-lc-vx1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello Kenan !" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-zX-Cb5" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="150.5" y="431" width="113" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="JLd-Rc-BdD"/>
+                                    <constraint firstAttribute="height" constant="34" id="O2j-Ui-KXY"/>
+                                </constraints>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zoy-qt-zeL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cEV-lc-vx1" firstAttribute="centerY" secondItem="y2X-ti-aK3" secondAttribute="centerY" id="G1M-9E-QRh"/>
+                            <constraint firstItem="cEV-lc-vx1" firstAttribute="trailing" secondItem="Zoy-qt-zeL" secondAttribute="trailing" id="LOg-Pb-DTO"/>
+                            <constraint firstItem="bhd-zX-Cb5" firstAttribute="centerY" secondItem="y2X-ti-aK3" secondAttribute="centerY" id="OKe-a9-2Vw"/>
+                            <constraint firstItem="cEV-lc-vx1" firstAttribute="leading" secondItem="Zoy-qt-zeL" secondAttribute="leading" id="QpH-vh-6nW"/>
+                            <constraint firstItem="cEV-lc-vx1" firstAttribute="top" secondItem="y2X-ti-aK3" secondAttribute="top" id="TXS-Fi-xdl"/>
+                            <constraint firstItem="bhd-zX-Cb5" firstAttribute="centerX" secondItem="y2X-ti-aK3" secondAttribute="centerX" id="TbD-0e-zdJ"/>
+                            <constraint firstItem="cEV-lc-vx1" firstAttribute="top" secondItem="y2X-ti-aK3" secondAttribute="topMargin" constant="-44" id="TqA-Da-hQm"/>
+                            <constraint firstItem="cEV-lc-vx1" firstAttribute="leading" secondItem="Zoy-qt-zeL" secondAttribute="leading" id="UwP-H1-0g1"/>
+                            <constraint firstAttribute="bottom" secondItem="cEV-lc-vx1" secondAttribute="bottom" id="dcS-3a-czZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRJ-0N-DtN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125" y="68"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
