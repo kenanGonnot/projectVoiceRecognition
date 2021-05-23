@@ -32,9 +32,11 @@
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilM-T4-lMf" userLabel="Registration Button">
-                                <rect key="frame" x="153.66666666666666" y="730" width="82.666666666666657" height="30"/>
+                                <rect key="frame" x="153.66666666666666" y="730" width="83" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="KVs-Co-nXS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82.670000000000002" id="RFx-Ad-Tb6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="mK1-rD-NFM"/>
                                 </constraints>
                                 <state key="normal" title="Registration">
                                     <color key="titleColor" systemColor="systemGray5Color"/>
@@ -131,15 +133,15 @@
                             <constraint firstItem="oJL-Kh-8AS" firstAttribute="centerY" secondItem="TkV-tf-TLL" secondAttribute="centerY" id="Gxy-ei-5yk"/>
                             <constraint firstItem="oJL-Kh-8AS" firstAttribute="centerX" secondItem="TkV-tf-TLL" secondAttribute="centerX" id="Hjp-X0-YfH"/>
                             <constraint firstItem="ilM-T4-lMf" firstAttribute="top" secondItem="bgb-vG-cKg" secondAttribute="bottom" constant="8" id="Il9-7J-tEy"/>
-                            <constraint firstItem="Aag-yl-cCY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bgb-vG-cKg" secondAttribute="trailing" symbolic="YES" id="LTN-39-MFh"/>
+                            <constraint firstItem="Aag-yl-cCY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bgb-vG-cKg" secondAttribute="trailing" symbolic="YES" id="OjT-mY-93e"/>
                             <constraint firstItem="pgo-LX-zRi" firstAttribute="centerY" secondItem="TkV-tf-TLL" secondAttribute="centerY" id="Wxf-ch-DqG"/>
                             <constraint firstItem="Lfj-WR-I7H" firstAttribute="centerY" secondItem="TkV-tf-TLL" secondAttribute="centerY" id="X7S-1q-ct5"/>
                             <constraint firstItem="E4A-3q-lfa" firstAttribute="leading" secondItem="bgb-vG-cKg" secondAttribute="leading" id="a1x-jp-hfa"/>
-                            <constraint firstItem="ilM-T4-lMf" firstAttribute="leading" secondItem="Aag-yl-cCY" secondAttribute="leading" constant="153.66666666666666" id="bgb-uy-053"/>
-                            <constraint firstItem="E4A-3q-lfa" firstAttribute="centerX" secondItem="ilM-T4-lMf" secondAttribute="centerX" id="coo-XC-zQv"/>
+                            <constraint firstItem="ilM-T4-lMf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Aag-yl-cCY" secondAttribute="leading" id="bgb-uy-053"/>
                             <constraint firstItem="Oup-Cp-cMd" firstAttribute="centerY" secondItem="oJL-Kh-8AS" secondAttribute="centerY" id="dAY-d1-Aib"/>
                             <constraint firstItem="KzE-po-3pr" firstAttribute="top" secondItem="ilM-T4-lMf" secondAttribute="bottom" constant="8" id="dFW-gZ-dFg"/>
                             <constraint firstItem="pgo-LX-zRi" firstAttribute="leading" secondItem="TkV-tf-TLL" secondAttribute="leadingMargin" constant="-8" id="efU-Dg-jAN"/>
+                            <constraint firstItem="Aag-yl-cCY" firstAttribute="trailing" secondItem="ilM-T4-lMf" secondAttribute="trailing" constant="153.33333333333334" id="fqN-MT-4IO"/>
                             <constraint firstAttribute="bottom" secondItem="E4A-3q-lfa" secondAttribute="bottom" constant="151" id="ipU-VT-F26"/>
                             <constraint firstItem="Lfj-WR-I7H" firstAttribute="centerX" secondItem="TkV-tf-TLL" secondAttribute="centerX" id="p6N-06-KOw"/>
                             <constraint firstItem="E4A-3q-lfa" firstAttribute="centerX" secondItem="KzE-po-3pr" secondAttribute="centerX" id="pKg-z0-FWy"/>
