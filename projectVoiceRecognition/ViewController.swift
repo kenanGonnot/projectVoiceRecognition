@@ -61,6 +61,7 @@ class ViewController: UIViewController {
             print("User Cancelled Verification");
         }, userVerificationSuccessful: {(voiceConfidence, jsonResponse) in
             print("User Verication Successful, voiceConfidence : \(voiceConfidence)")
+            self.displayConnectedPageAction()
         }, userVerificationFailed: { (voiceConfidence, jsonResponse) in
             print("User Verication Failed, voiceConfidence : \(voiceConfidence)")
         })
@@ -102,7 +103,7 @@ class ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    @IBAction func didTapButton(){
+    @IBAction func displayConnectedPageAction(){
         guard let vc = storyboard?.instantiateViewController(identifier: "connected_vc") as? ConnectedViewController else {
             return 
         }
