@@ -90,6 +90,7 @@
                                     <color key="titleColor" systemColor="systemBlueColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="didTapButton" destination="87B-pq-mmE" eventType="editingChanged" id="u6s-bO-T9w"/>
                                     <action selector="verification" destination="87B-pq-mmE" eventType="primaryActionTriggered" id="IXV-o4-3Bh"/>
                                 </connections>
                             </button>
@@ -113,8 +114,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Test"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzE-po-3pr">
+                                <rect key="frame" x="177" y="832" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="G3J-R8-svU"/>
+                                </constraints>
+                                <state key="normal" title="About us">
+                                    <color key="titleColor" systemColor="systemGray5Color"/>
+                                </state>
                                 <connections>
-                                    <action selector="didTapButton" destination="87B-pq-mmE" eventType="touchUpInside" id="nqh-Vw-MaZ"/>
+                                    <action selector="enrollment" destination="87B-pq-mmE" eventType="primaryActionTriggered" id="Rol-83-vjC"/>
+                                    <action selector="showMessageWithSender:" destination="87B-pq-mmE" eventType="touchUpInside" id="7BK-Hs-I47"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -130,6 +141,7 @@
                             <constraint firstItem="Oup-Cp-cMd" firstAttribute="top" secondItem="pgo-LX-zRi" secondAttribute="top" constant="1" id="KDQ-pu-eEL"/>
                             <constraint firstItem="oJL-Kh-8AS" firstAttribute="centerY" secondItem="pgo-LX-zRi" secondAttribute="centerY" constant="1" id="Pl5-og-rBp"/>
                             <constraint firstItem="E4A-3q-lfa" firstAttribute="centerX" secondItem="TkV-tf-TLL" secondAttribute="centerX" id="UES-xU-4Q9"/>
+                            <constraint firstItem="KzE-po-3pr" firstAttribute="centerX" secondItem="TkV-tf-TLL" secondAttribute="centerX" constant="1" id="VF0-qX-FBH"/>
                             <constraint firstItem="oJL-Kh-8AS" firstAttribute="centerX" secondItem="E4A-3q-lfa" secondAttribute="centerX" id="VuD-JK-Vfn"/>
                             <constraint firstItem="ilM-T4-lMf" firstAttribute="centerX" secondItem="E4A-3q-lfa" secondAttribute="centerX" id="WC5-Cr-pRb"/>
                             <constraint firstItem="Lfj-WR-I7H" firstAttribute="top" secondItem="TkV-tf-TLL" secondAttribute="top" id="b1w-w7-Rs4"/>
@@ -138,6 +150,7 @@
                             <constraint firstItem="ilM-T4-lMf" firstAttribute="top" secondItem="bgb-vG-cKg" secondAttribute="bottom" constant="8" id="k64-jN-Hce"/>
                             <constraint firstItem="Lfj-WR-I7H" firstAttribute="trailing" secondItem="Aag-yl-cCY" secondAttribute="trailing" id="n4o-Hs-11v"/>
                             <constraint firstItem="Lfj-WR-I7H" firstAttribute="top" secondItem="TkV-tf-TLL" secondAttribute="topMargin" constant="-44" id="nwA-DW-qYX"/>
+                            <constraint firstItem="KzE-po-3pr" firstAttribute="centerY" secondItem="TkV-tf-TLL" secondAttribute="centerY" constant="399" id="q12-pb-SHU"/>
                             <constraint firstItem="Lfj-WR-I7H" firstAttribute="centerY" secondItem="TkV-tf-TLL" secondAttribute="centerY" id="wCT-hq-mRH"/>
                             <constraint firstItem="E4A-3q-lfa" firstAttribute="centerX" secondItem="Lfj-WR-I7H" secondAttribute="centerX" id="wEx-Qd-fbF"/>
                             <constraint firstItem="Oup-Cp-cMd" firstAttribute="trailing" secondItem="TkV-tf-TLL" secondAttribute="trailingMargin" id="znv-QA-vfs"/>
