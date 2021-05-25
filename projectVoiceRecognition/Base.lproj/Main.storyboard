@@ -17,9 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="F" translatesAutoresizingMaskIntoConstraints="NO" id="Lfj-WR-I7H">
+                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="F" translatesAutoresizingMaskIntoConstraints="NO" id="Lfj-WR-I7H">
                                 <rect key="frame" x="-180" y="-245" width="750" height="1334"/>
-                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgb-vG-cKg">
                                 <rect key="frame" x="75" y="702" width="240" height="20"/>
@@ -72,7 +73,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="b8w-94-Ucv"/>
                                     <constraint firstAttribute="height" constant="40" id="yKg-T8-Mmg"/>
                                 </constraints>
-                                <state key="normal" title="Connexion">
+                                <state key="normal" title="log in">
                                     <color key="titleColor" systemColor="systemBlueColor"/>
                                 </state>
                                 <connections>
@@ -100,7 +101,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="0.99992686509999995" green="1" blue="0.99987345930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="6M8-Yc-jSz"/>
                                     <constraint firstAttribute="width" constant="109" id="X7F-Lt-yd7"/>
@@ -115,7 +116,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="0.99992686509999995" green="1" blue="0.99987345930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="094-52-Zm6"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="109" id="60v-P6-sZC"/>
@@ -170,8 +171,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello Kenan !" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-zX-Cb5" colorLabel="IBBuiltInLabel-Blue">
-                                <rect key="frame" x="138.66666666666666" y="405" width="113" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello !" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-zX-Cb5" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="138.66666666666666" y="61" width="113" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="JLd-Rc-BdD"/>
                                     <constraint firstAttribute="height" constant="34" id="O2j-Ui-KXY"/>
@@ -180,18 +181,45 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname : Kenan" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgH-J7-Ua2">
+                                <rect key="frame" x="110" y="124" width="170" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastname : Gonnot" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="203-Za-iK3">
+                                <rect key="frame" x="110" y="169" width="180" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mail : kenan@bvoice.fr" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJU-Ht-POV">
+                                <rect key="frame" x="110" y="215" width="213" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zoy-qt-zeL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="WgH-J7-Ua2" firstAttribute="top" secondItem="bhd-zX-Cb5" secondAttribute="bottom" constant="29" id="5US-Yk-eZS"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="centerY" secondItem="y2X-ti-aK3" secondAttribute="centerY" id="G1M-9E-QRh"/>
+                            <constraint firstItem="bhd-zX-Cb5" firstAttribute="centerX" secondItem="cEV-lc-vx1" secondAttribute="centerX" id="J94-P2-Lrt"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="trailing" secondItem="Zoy-qt-zeL" secondAttribute="trailing" id="LOg-Pb-DTO"/>
-                            <constraint firstItem="bhd-zX-Cb5" firstAttribute="centerY" secondItem="y2X-ti-aK3" secondAttribute="centerY" id="OKe-a9-2Vw"/>
+                            <constraint firstItem="203-Za-iK3" firstAttribute="leading" secondItem="WgH-J7-Ua2" secondAttribute="leading" id="MQr-4F-fd8"/>
+                            <constraint firstItem="AJU-Ht-POV" firstAttribute="top" secondItem="203-Za-iK3" secondAttribute="bottom" constant="19" id="Oqk-SF-fvX"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="leading" secondItem="Zoy-qt-zeL" secondAttribute="leading" id="QpH-vh-6nW"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="top" secondItem="y2X-ti-aK3" secondAttribute="top" id="TXS-Fi-xdl"/>
-                            <constraint firstItem="bhd-zX-Cb5" firstAttribute="centerX" secondItem="y2X-ti-aK3" secondAttribute="centerX" id="TbD-0e-zdJ"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="leading" secondItem="Zoy-qt-zeL" secondAttribute="leading" id="UwP-H1-0g1"/>
+                            <constraint firstItem="bhd-zX-Cb5" firstAttribute="top" secondItem="Zoy-qt-zeL" secondAttribute="top" constant="17" id="X6z-Uf-g5b"/>
                             <constraint firstAttribute="bottom" secondItem="cEV-lc-vx1" secondAttribute="bottom" id="dcS-3a-czZ"/>
+                            <constraint firstItem="WgH-J7-Ua2" firstAttribute="centerX" secondItem="bhd-zX-Cb5" secondAttribute="centerX" id="e4L-OF-IQw"/>
+                            <constraint firstItem="203-Za-iK3" firstAttribute="top" secondItem="WgH-J7-Ua2" secondAttribute="bottom" constant="18" id="f4u-jT-hOu"/>
+                            <constraint firstItem="AJU-Ht-POV" firstAttribute="leading" secondItem="203-Za-iK3" secondAttribute="leading" id="mu6-NT-iv8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M2o-GE-PMZ"/>
@@ -201,7 +229,7 @@
             <point key="canvasLocation" x="125" y="68"/>
         </scene>
     </scenes>
-    <color key="tintColor" name="AccentColor"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="F" width="750" height="1334"/>
         <namedColor name="AccentColor">
