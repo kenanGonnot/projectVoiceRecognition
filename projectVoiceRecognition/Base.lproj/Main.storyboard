@@ -125,16 +125,25 @@
                                 </constraints>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeq-qo-Mdq">
+                                <rect key="frame" x="322" y="44" width="30" height="30"/>
+                                <state key="normal" title="info"/>
+                                <connections>
+                                    <action selector="displayConnectedPageAction" destination="87B-pq-mmE" eventType="touchUpInside" id="uad-l2-vc1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Aag-yl-cCY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="E4A-3q-lfa" firstAttribute="centerX" secondItem="oJL-Kh-8AS" secondAttribute="centerX" id="Anb-ic-OJm"/>
+                            <constraint firstItem="oeq-qo-Mdq" firstAttribute="top" secondItem="Aag-yl-cCY" secondAttribute="top" id="CGF-GQ-4zG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Oup-Cp-cMd" secondAttribute="trailing" constant="-8" id="Cef-s7-ek0"/>
                             <constraint firstItem="oJL-Kh-8AS" firstAttribute="centerY" secondItem="TkV-tf-TLL" secondAttribute="centerY" id="Gxy-ei-5yk"/>
                             <constraint firstItem="oJL-Kh-8AS" firstAttribute="centerX" secondItem="TkV-tf-TLL" secondAttribute="centerX" id="Hjp-X0-YfH"/>
                             <constraint firstItem="ilM-T4-lMf" firstAttribute="top" secondItem="bgb-vG-cKg" secondAttribute="bottom" constant="8" id="Il9-7J-tEy"/>
                             <constraint firstItem="Aag-yl-cCY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bgb-vG-cKg" secondAttribute="trailing" symbolic="YES" id="OjT-mY-93e"/>
+                            <constraint firstItem="oeq-qo-Mdq" firstAttribute="leading" secondItem="Aag-yl-cCY" secondAttribute="leading" constant="322" id="UWi-o9-TpF"/>
                             <constraint firstItem="pgo-LX-zRi" firstAttribute="centerY" secondItem="TkV-tf-TLL" secondAttribute="centerY" id="Wxf-ch-DqG"/>
                             <constraint firstItem="Lfj-WR-I7H" firstAttribute="centerY" secondItem="TkV-tf-TLL" secondAttribute="centerY" id="X7S-1q-ct5"/>
                             <constraint firstItem="E4A-3q-lfa" firstAttribute="leading" secondItem="bgb-vG-cKg" secondAttribute="leading" id="a1x-jp-hfa"/>
