@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="87B-pq-mmE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NdT-ac-yND">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="6sy-dx-Gzp">
             <objects>
-                <viewController title="View Controller" id="87B-pq-mmE" customClass="ViewController" customModule="projectVoiceRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home_vc" title="View Controller" id="87B-pq-mmE" customClass="ViewController" customModule="projectVoiceRecognition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TkV-tf-TLL">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +158,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="connexionButton" destination="oJL-Kh-8AS" id="IYk-H1-waR"/>
+                        <outlet property="connexionButton" destination="oJL-Kh-8AS" id="Nvq-GE-c35"/>
                         <outlet property="inscriptionButton" destination="ilM-T4-lMf" id="O1v-Gk-bjB"/>
                     </connections>
                 </viewController>
@@ -178,57 +178,41 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello !" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-zX-Cb5" colorLabel="IBBuiltInLabel-Blue">
-                                <rect key="frame" x="138.66666666666666" y="61" width="113" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Verification complete !" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-zX-Cb5" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="108.66666666666669" y="61" width="173" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="113" id="JLd-Rc-BdD"/>
-                                    <constraint firstAttribute="height" constant="34" id="O2j-Ui-KXY"/>
+                                    <constraint firstAttribute="width" constant="173" id="Ie5-0I-X6I"/>
+                                    <constraint firstAttribute="height" constant="34" id="kbS-Z3-7qD"/>
                                 </constraints>
                                 <color key="textColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname : Kenan" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgH-J7-Ua2">
-                                <rect key="frame" x="110" y="124" width="170" height="27"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lastname : Gonnot" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="203-Za-iK3">
-                                <rect key="frame" x="110" y="169" width="180" height="27"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mail : kenan@bvoice.fr" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJU-Ht-POV">
-                                <rect key="frame" x="110" y="215" width="213" height="27"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello User ! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nl-yE-Xus">
+                                <rect key="frame" x="117.33333333333333" y="404" width="155.33333333333337" height="36"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="lXv-zf-sgG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <color key="highlightedColor" systemColor="labelColor"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zoy-qt-zeL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Zoy-qt-zeL" firstAttribute="trailing" secondItem="203-Za-iK3" secondAttribute="trailing" constant="100" id="0lb-hD-CZh"/>
-                            <constraint firstItem="WgH-J7-Ua2" firstAttribute="top" secondItem="bhd-zX-Cb5" secondAttribute="bottom" constant="29" id="5US-Yk-eZS"/>
+                            <constraint firstItem="1nl-yE-Xus" firstAttribute="centerY" secondItem="y2X-ti-aK3" secondAttribute="centerY" id="3Er-Dc-zGb"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="centerY" secondItem="y2X-ti-aK3" secondAttribute="centerY" id="G1M-9E-QRh"/>
                             <constraint firstItem="bhd-zX-Cb5" firstAttribute="centerX" secondItem="cEV-lc-vx1" secondAttribute="centerX" id="J94-P2-Lrt"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="trailing" secondItem="Zoy-qt-zeL" secondAttribute="trailing" id="LOg-Pb-DTO"/>
-                            <constraint firstItem="203-Za-iK3" firstAttribute="leading" secondItem="WgH-J7-Ua2" secondAttribute="leading" id="MQr-4F-fd8"/>
-                            <constraint firstItem="AJU-Ht-POV" firstAttribute="top" secondItem="203-Za-iK3" secondAttribute="bottom" constant="19" id="Oqk-SF-fvX"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="leading" secondItem="Zoy-qt-zeL" secondAttribute="leading" id="QpH-vh-6nW"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="top" secondItem="y2X-ti-aK3" secondAttribute="top" id="TXS-Fi-xdl"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="leading" secondItem="Zoy-qt-zeL" secondAttribute="leading" id="UwP-H1-0g1"/>
-                            <constraint firstItem="Zoy-qt-zeL" firstAttribute="trailing" secondItem="AJU-Ht-POV" secondAttribute="trailing" constant="67" id="WKT-0h-J1E"/>
                             <constraint firstItem="bhd-zX-Cb5" firstAttribute="top" secondItem="Zoy-qt-zeL" secondAttribute="top" constant="17" id="X6z-Uf-g5b"/>
                             <constraint firstAttribute="bottom" secondItem="cEV-lc-vx1" secondAttribute="bottom" id="dcS-3a-czZ"/>
-                            <constraint firstItem="WgH-J7-Ua2" firstAttribute="centerX" secondItem="bhd-zX-Cb5" secondAttribute="centerX" id="e4L-OF-IQw"/>
-                            <constraint firstItem="203-Za-iK3" firstAttribute="top" secondItem="WgH-J7-Ua2" secondAttribute="bottom" constant="18" id="f4u-jT-hOu"/>
-                            <constraint firstItem="AJU-Ht-POV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="203-Za-iK3" secondAttribute="leading" id="mu6-NT-iv8"/>
+                            <constraint firstItem="1nl-yE-Xus" firstAttribute="centerX" secondItem="y2X-ti-aK3" secondAttribute="centerX" id="llm-Sb-Nj3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M2o-GE-PMZ"/>
@@ -237,13 +221,45 @@
             </objects>
             <point key="canvasLocation" x="125" y="68"/>
         </scene>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="wr7-8E-R3b">
+            <objects>
+                <viewController id="NdT-ac-yND" customClass="LaunchScreenViewController" customModule="projectVoiceRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Eg-Lv-sJl">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-87-teZ">
+                                <rect key="frame" x="120" y="347" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="WA6-y4-V36"/>
+                                    <constraint firstAttribute="width" constant="150" id="xr2-ed-JS1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LxI-vV-Y3w"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iwF-87-teZ" firstAttribute="centerY" secondItem="6Eg-Lv-sJl" secondAttribute="centerY" id="SUh-UV-81z"/>
+                            <constraint firstItem="iwF-87-teZ" firstAttribute="centerX" secondItem="6Eg-Lv-sJl" secondAttribute="centerX" id="vbY-oC-hy0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyE-Jc-TEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1386" y="68"/>
+        </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="F" width="750" height="1334"/>
+        <image name="logo" width="1024" height="1024"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -255,6 +271,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

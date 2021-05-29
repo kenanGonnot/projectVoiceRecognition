@@ -27,6 +27,7 @@ class ViewController: UIViewController {
 
     
     override func viewDidLoad() {
+        print("before setup buttons")
         super.viewDidLoad()
         setupButtons()
 
@@ -88,14 +89,6 @@ class ViewController: UIViewController {
         })
     }
     
-    
-    //        myVoiceIt?.encapsulatedVoiceVerification(userId, contentLanguage: language, voicePrintPhrase: phrase, userVerificationCancelled: {
-    //            print("User Cancelled Verification");
-    //        }, userVerificationSuccessful: {(voiceConfidence, jsonResponse) in
-    //            print("User Verication Successful, voiceConfidence : \(voiceConfidence)")
-    //        }, userVerificationFailed: { (voiceConfidence, jsonResponse) in
-    //            print("User Verication Failed, voiceConfidence : \(voiceConfidence)")
-    //        })
     
     @IBAction func showMessage(sender: UIButton) {
         let alertController = UIAlertController(title: "Welcome to our First App", message: "Hello ! It's Kenan and Fayçal !", preferredStyle: UIAlertController.Style.alert)
