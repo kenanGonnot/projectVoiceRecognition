@@ -103,6 +103,14 @@ class ViewController: UIViewController {
         present(vc, animated: true)
     }
     
+    @IBAction func displayRegistration(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "registration_vc") 
+        newViewController.modalTransitionStyle = .crossDissolve
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
 }
 
 
