@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var inscriptionButton: UIButton!
     @IBOutlet weak var deconnectionButton: UIButton!
     @IBOutlet weak var informationButton: UIButton!
+    @IBOutlet weak var TestButton: UIButton!
 
     
     override func viewDidLoad() {
@@ -45,8 +46,12 @@ class ViewController: UIViewController {
     }
     
     private func setupButtons() {
-        buttonDesign(button: connexionButton)
-        buttonDesign(button: inscriptionButton)
+        if (connexionButton != nil) {
+            buttonDesign(button: connexionButton)
+        }
+        if (inscriptionButton != nil) {
+            buttonDesign(button: inscriptionButton)
+        }
         
     }
     
