@@ -131,6 +131,11 @@ class ViewController: UIViewController {
         swapViewController(identifier: "connected_vc")
     }
     
+    @IBAction func displayLoginPage(){
+        swapViewController(identifier: "login_vc")
+    }
+    
+    
     @IBAction func displayRegistrationPage(){
         swapViewController(identifier: "registration_vc")
     }

@@ -72,19 +72,31 @@ class RegistrationViewController: ViewController, UITextFieldDelegate {
     }
     
     
+    fileprivate func buttonDesign(button: UIButton) {
+        button.layer.cornerRadius = 20
+        button.layer.borderWidth = 3
+        button.layer.borderColor = UIColor.orange.cgColor
+    }
     
     
     private func setup1Buttons(){
-        NextStepButton.layer.cornerRadius = 20
-        NextStepButton.layer.borderWidth = 3
-        NextStepButton.layer.borderColor = UIColor.orange.cgColor
+        if (NextStepButton != nil) {
+            buttonDesign(button: NextStepButton)
+        }
+        
     }
 
     
     private func setup1TextFieldManager() {
         UsernameTextField.delegate = self
-        EmailTextField.delegate = self
-        PasswordTextField.delegate = self
+        if (EmailTextField != nil) {
+            EmailTextField.delegate = self
+        }
+        if PasswordTextField != nil {
+            PasswordTextField.delegate = self
+        }
+        
+        
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tapGesture)
