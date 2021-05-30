@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+
 
 class RegistrationViewController: ViewController, UITextFieldDelegate {
 
@@ -21,6 +24,55 @@ class RegistrationViewController: ViewController, UITextFieldDelegate {
         setup1TextFieldManager()
         // Do any additional setup after loading the view.
     }
+    
+    private func create_VoiceIT_user(){
+        myVoiceIt?.createUser({
+            jsonResponse in
+            print("JSON RESPONSE: \(jsonResponse!)")
+        })
+    }
+    
+
+    
+    
+    @IBAction func enrollment(){
+        //Auth.auth().createUser(withEmail: EmailTextField.text!, password: PasswordTextField.text!) { authResult, error in
+               // [START_EXCLUDE]
+          //       guard let user = authResult?.user, error == nil else {
+            //       print(error!.localizedDescription)
+            //       return
+            //     }
+            //     print("\(user.email!) created")
+            //     self.navigationController?.popViewController(animated: true)
+               // [END_EXCLUDE]
+            // }
+             // [END create_user]
+        let collection = Firestore.firestore().collection("utilisateurs")
+        let utilisateur = Utilisateurs(
+          username: UsernameTextField.text!,
+          email: EmailTextField.text!,
+          password: PasswordTextField.text!,
+          userID: "usr_0caa14ac5fb64ebdb32bcf515ed948c4"
+        )
+
+        myVoiceIt?.encapsulatedVoiceEnrollUser("usr_0caa14ac5fb64ebdb32bcf515ed948c4", contentLanguage: language, voicePrintPhrase: phrase, userEnrollmentsCancelled: {
+            print("ANNULERRRRRRR")
+            self.displayConnectedPage()
+        }, userEnrollmentsPassed: {_ in
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.5,
+                                          execute: {
+                                            print("FONCTIONNE")
+                                            self.dismiss(animated: true, completion: {
+                                                collection.addDocument(data: utilisateur.dictionary)
+                                                self.displayConnectedPage()
+                                                        })
+                                            })
+
+        })
+    }
+    
+    
+    
     
     private func setup1Buttons(){
         NextStepButton.layer.cornerRadius = 20

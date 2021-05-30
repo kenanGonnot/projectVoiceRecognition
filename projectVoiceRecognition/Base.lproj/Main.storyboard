@@ -3,7 +3,6 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,16 +20,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Verification complete !" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhd-zX-Cb5" colorLabel="IBBuiltInLabel-Blue">
-                                <rect key="frame" x="108.66666666666669" y="61" width="173" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="173" id="Ie5-0I-X6I"/>
-                                    <constraint firstAttribute="height" constant="34" id="kbS-Z3-7qD"/>
-                                </constraints>
-                                <color key="textColor" name="AccentColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Username ! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nl-yE-Xus">
                                 <rect key="frame" x="81" y="404" width="228" height="36"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
@@ -73,16 +62,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1nl-yE-Xus" firstAttribute="centerY" secondItem="y2X-ti-aK3" secondAttribute="centerY" id="3Er-Dc-zGb"/>
-                            <constraint firstItem="qcE-3X-kpn" firstAttribute="top" secondItem="bhd-zX-Cb5" secondAttribute="bottom" constant="80" id="3ux-4f-0fx"/>
+                            <constraint firstItem="qcE-3X-kpn" firstAttribute="top" secondItem="Zoy-qt-zeL" secondAttribute="top" constant="131" id="A3Q-9b-4FP"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="centerY" secondItem="y2X-ti-aK3" secondAttribute="centerY" id="G1M-9E-QRh"/>
-                            <constraint firstItem="bhd-zX-Cb5" firstAttribute="centerX" secondItem="cEV-lc-vx1" secondAttribute="centerX" id="J94-P2-Lrt"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="trailing" secondItem="Zoy-qt-zeL" secondAttribute="trailing" id="LOg-Pb-DTO"/>
                             <constraint firstItem="CGC-qP-17A" firstAttribute="centerX" secondItem="y2X-ti-aK3" secondAttribute="centerX" id="MjJ-8Z-2Kh"/>
                             <constraint firstItem="Zoy-qt-zeL" firstAttribute="bottom" secondItem="CGC-qP-17A" secondAttribute="bottom" constant="79" id="Qmj-qh-KSc"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="leading" secondItem="Zoy-qt-zeL" secondAttribute="leading" id="QpH-vh-6nW"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="top" secondItem="y2X-ti-aK3" secondAttribute="top" id="TXS-Fi-xdl"/>
                             <constraint firstItem="cEV-lc-vx1" firstAttribute="leading" secondItem="Zoy-qt-zeL" secondAttribute="leading" id="UwP-H1-0g1"/>
-                            <constraint firstItem="bhd-zX-Cb5" firstAttribute="top" secondItem="Zoy-qt-zeL" secondAttribute="top" constant="17" id="X6z-Uf-g5b"/>
                             <constraint firstAttribute="bottom" secondItem="cEV-lc-vx1" secondAttribute="bottom" id="dcS-3a-czZ"/>
                             <constraint firstItem="1nl-yE-Xus" firstAttribute="centerX" secondItem="y2X-ti-aK3" secondAttribute="centerX" id="llm-Sb-Nj3"/>
                             <constraint firstItem="qcE-3X-kpn" firstAttribute="centerX" secondItem="y2X-ti-aK3" secondAttribute="centerX" id="xba-Ea-lce"/>
@@ -196,7 +183,7 @@
                                     <color key="titleColor" red="1" green="0.76758845659999997" blue="0.15102735519999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="displayConnectedPageAction" destination="8n8-Ug-T16" eventType="touchUpInside" id="c2D-B3-JaK"/>
+                                    <action selector="displayConnectedPage" destination="8n8-Ug-T16" eventType="touchUpInside" id="c2D-B3-JaK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -460,15 +447,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Information about us" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ekf-DH-emc" colorLabel="IBBuiltInLabel-Blue">
-                                <rect key="frame" x="114" y="61" width="162" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="v36-8m-QDH"/>
-                                </constraints>
-                                <color key="textColor" name="AccentColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About us " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nv-1n-Oaf">
                                 <rect key="frame" x="134" y="404" width="122.33333333333331" height="36"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
@@ -481,7 +459,7 @@
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPP-Cn-3nH">
-                                <rect key="frame" x="16.000000000000004" y="61" width="51.333333333333343" height="40"/>
+                                <rect key="frame" x="16" y="61" width="50" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jh8-Vd-1sd"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ose-a2-pvR"/>
@@ -490,25 +468,23 @@
                                     <color key="titleColor" red="1" green="0.76758845659999997" blue="0.15102735519999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="displayConnectedPageAction" destination="maN-8J-3nE" eventType="touchUpInside" id="W1S-vh-wmp"/>
+                                    <action selector="displayConnectedPage" destination="maN-8J-3nE" eventType="touchUpInside" id="Bqf-ma-M8O"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vSl-U0-rRM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XPP-Cn-3nH" firstAttribute="top" secondItem="vSl-U0-rRM" secondAttribute="top" constant="17" id="34p-2o-UDy"/>
                             <constraint firstItem="qcW-m2-Z2n" firstAttribute="leading" secondItem="vSl-U0-rRM" secondAttribute="leading" id="5LQ-42-LQX"/>
                             <constraint firstItem="8nv-1n-Oaf" firstAttribute="centerY" secondItem="iWx-Od-mlH" secondAttribute="centerY" id="8gs-Qo-Pdl"/>
                             <constraint firstItem="qcW-m2-Z2n" firstAttribute="top" secondItem="iWx-Od-mlH" secondAttribute="top" id="9Yi-kE-gpB"/>
-                            <constraint firstItem="ekf-DH-emc" firstAttribute="centerX" secondItem="qcW-m2-Z2n" secondAttribute="centerX" id="BQU-h5-aL0"/>
-                            <constraint firstItem="ekf-DH-emc" firstAttribute="leading" secondItem="XPP-Cn-3nH" secondAttribute="trailing" constant="46.666666666666686" id="ChB-8U-0DO"/>
+                            <constraint firstItem="vSl-U0-rRM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XPP-Cn-3nH" secondAttribute="trailing" symbolic="YES" id="CQq-mA-zYg"/>
                             <constraint firstAttribute="bottom" secondItem="qcW-m2-Z2n" secondAttribute="bottom" id="NSu-W6-uHC"/>
-                            <constraint firstItem="XPP-Cn-3nH" firstAttribute="top" secondItem="ekf-DH-emc" secondAttribute="top" id="R3m-Qo-Rm5"/>
                             <constraint firstItem="qcW-m2-Z2n" firstAttribute="leading" secondItem="vSl-U0-rRM" secondAttribute="leading" id="RQn-5B-Ls2"/>
                             <constraint firstItem="8nv-1n-Oaf" firstAttribute="centerX" secondItem="iWx-Od-mlH" secondAttribute="centerX" id="Tj6-D1-6RX"/>
                             <constraint firstItem="qcW-m2-Z2n" firstAttribute="trailing" secondItem="vSl-U0-rRM" secondAttribute="trailing" id="Y3Z-q2-HVN"/>
                             <constraint firstItem="XPP-Cn-3nH" firstAttribute="leading" secondItem="iWx-Od-mlH" secondAttribute="leadingMargin" id="e9T-52-zol"/>
-                            <constraint firstItem="ekf-DH-emc" firstAttribute="top" secondItem="vSl-U0-rRM" secondAttribute="top" constant="17" id="eIm-7X-XO6"/>
                             <constraint firstItem="qcW-m2-Z2n" firstAttribute="centerY" secondItem="iWx-Od-mlH" secondAttribute="centerY" id="qH2-s6-Hpf"/>
                         </constraints>
                     </view>
@@ -523,9 +499,6 @@
     <resources>
         <image name="FFD" width="1181" height="2560"/>
         <image name="logo" width="1024" height="1024"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

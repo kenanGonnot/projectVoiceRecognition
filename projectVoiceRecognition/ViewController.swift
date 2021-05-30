@@ -7,6 +7,8 @@
 
 import UIKit
 import VoiceIt2_IosSDK
+import FirebaseFirestore
+
 
 class ViewController: UIViewController {
     var myVoiceIt:VoiceItAPITwo?
@@ -16,8 +18,8 @@ class ViewController: UIViewController {
 //    let language = "en-US";
     let language = "no-STT";
     let phrase = "hello i am very happy today";
-    let userId = "usr_9f4b211a85b24b0886ffdc82b8f54bf9";
-    
+    //let userId = "usr_9f4b211a85b24b0886ffdc82b8f54bf9";
+    let username = "test1"
     // MARK: Outelts
     
     @IBOutlet weak var connexionButton: UIButton!
@@ -59,33 +61,40 @@ class ViewController: UIViewController {
 
     
     
-    @IBAction func enrollment(){
-        print("hello")
-        myVoiceIt?.encapsulatedVoiceEnrollUser(userId, contentLanguage: language, voicePrintPhrase: phrase, userEnrollmentsCancelled: {
-            print("User Enrollment Cancelled")
-        }, userEnrollmentsPassed: {_ in
-            print("User Enrollments Passed")
-        })
-    }
+
     
-    @IBAction func verification(){
+    fileprivate func authenticateVoiceIt(userId:String) {
         myVoiceIt?.encapsulatedVoiceVerification(userId, contentLanguage: language, voicePrintPhrase: phrase, userVerificationCancelled: {
             print("User Cancelled Verification");
         }, userVerificationSuccessful: {(voiceConfidence, jsonResponse) in
             print("User Verication Successful, voiceConfidence : \(voiceConfidence)")
-            self.displayConnectedPageAction()
+            self.displayConnectedPage()
         }, userVerificationFailed: { (voiceConfidence, jsonResponse) in
             print("User Verication Failed, voiceConfidence : \(voiceConfidence)")
         })
     }
+    
+    @IBAction func verification(){
+    
+        let userList = Firestore.firestore().collection("utilisateurs").whereField("username", isEqualTo: username)
+        
+        userList.getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print(document.get("userID")!)
+                        self.authenticateVoiceIt(userId: document.get("userID") as! String)
+                    }
+                }
+        }
 
-
-    @IBAction func create_user(){
-        myVoiceIt?.createUser({
-            jsonResponse in
-            print("JSON RESPONSE: \(jsonResponse!)")
-        })
+        
+        
     }
+
+
+
     
     @IBAction func create_group(){
         myVoiceIt?.createGroup("Groupe ESME", callback: {
@@ -108,6 +117,9 @@ class ViewController: UIViewController {
     }
 
     fileprivate func swapViewController(identifier:String) {
+        if let presented = self.presentedViewController {
+            presented.removeFromParent()
+        }
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: identifier)
         newViewController.modalTransitionStyle = .crossDissolve
@@ -115,7 +127,7 @@ class ViewController: UIViewController {
         self.present(newViewController, animated: true, completion: nil)
     }
     
-    @IBAction func displayConnectedPageAction(){
+    @IBAction func displayConnectedPage(){
         swapViewController(identifier: "connected_vc")
     }
     
