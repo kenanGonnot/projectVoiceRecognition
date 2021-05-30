@@ -7,4 +7,8 @@ target 'projectVoiceRecognition' do
 
   # Pods for projectVoiceRecognition
   pod "VoiceIt2-IosSDK"
+  # add pods for desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 end
