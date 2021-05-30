@@ -270,6 +270,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="1" green="0.76758845659999997" blue="0.15102735519999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="verification" destination="8n8-Ug-T16" eventType="touchUpInside" id="243-sr-13D"/>
+                                </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6q-f3-9Vj">
                                 <rect key="frame" x="75" y="687" width="240" height="4"/>

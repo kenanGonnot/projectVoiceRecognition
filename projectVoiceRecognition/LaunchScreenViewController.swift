@@ -47,7 +47,7 @@ class LaunchScreenViewController: UIViewController {
             })
             
             UIView.animate(withDuration: 1.5, animations: {
-                self.imageView.alpha = 0.5
+                self.imageView.alpha = 0.6
             }, completion: { done in
                 if done{
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {                        

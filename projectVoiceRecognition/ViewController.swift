@@ -41,7 +41,9 @@ class ViewController: UIViewController {
     // MARK : Private functions
     private func setupButtons() {
         connexionButton.layer.cornerRadius = 20
-    
+        connexionButton.layer.borderWidth = 3
+        connexionButton.layer.borderColor = UIColor.orange.cgColor
+        
     }
     
     // MARK : Actions
