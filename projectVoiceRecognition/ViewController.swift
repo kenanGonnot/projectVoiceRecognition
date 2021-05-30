@@ -11,7 +11,6 @@ import VoiceIt2_IosSDK
 class ViewController: UIViewController {
     var myVoiceIt:VoiceItAPITwo?
     
-    
     let API_KEY = "key_c5f8c444d0504af49de136f3ce12b62a";
     let API_TOK = "tok_4fd9e0c54a584c7598cd047f74846760";
 //    let language = "en-US";
@@ -23,11 +22,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var connexionButton: UIButton!
     @IBOutlet weak var inscriptionButton: UIButton!
-
+    @IBOutlet weak var deconnectionButton: UIButton!
+    @IBOutlet weak var informationButton: UIButton!
 
     
     override func viewDidLoad() {
-        print("before setup buttons")
         super.viewDidLoad()
         setupButtons()
 
@@ -39,10 +38,15 @@ class ViewController: UIViewController {
     
     
     // MARK : Private functions
+    fileprivate func buttonDesign(button: UIButton) {
+        button.layer.cornerRadius = 20
+        button.layer.borderWidth = 3
+        button.layer.borderColor = UIColor.orange.cgColor
+    }
+    
     private func setupButtons() {
-        connexionButton.layer.cornerRadius = 20
-        connexionButton.layer.borderWidth = 3
-        connexionButton.layer.borderColor = UIColor.orange.cgColor
+        buttonDesign(button: connexionButton)
+        buttonDesign(button: inscriptionButton)
         
     }
     
@@ -98,19 +102,28 @@ class ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    @IBAction func displayConnectedPageAction(){
-        guard let vc = storyboard?.instantiateViewController(identifier: "connected_vc") as? ConnectedViewController else {
-            return 
-        }
-        present(vc, animated: true)
-    }
-    
-    @IBAction func displayRegistration(){
+    fileprivate func swapViewController(identifier:String) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "registration_vc") 
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: identifier)
         newViewController.modalTransitionStyle = .crossDissolve
         newViewController.modalPresentationStyle = .fullScreen
         self.present(newViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func displayConnectedPageAction(){
+        swapViewController(identifier: "connected_vc")
+    }
+    
+    @IBAction func displayRegistrationPage(){
+        swapViewController(identifier: "registration_vc")
+    }
+    
+    @IBAction func returnDisplayHomePage(){
+        swapViewController(identifier: "home_vc")
+    }
+    
+    @IBAction func displayInformationPage(){
+        swapViewController(identifier: "information_vc")
     }
     
 }
