@@ -11,7 +11,6 @@ import VoiceIt2_IosSDK
 class ViewController: UIViewController {
     var myVoiceIt:VoiceItAPITwo?
     
-    
     let API_KEY = "key_c5f8c444d0504af49de136f3ce12b62a";
     let API_TOK = "tok_4fd9e0c54a584c7598cd047f74846760";
 //    let language = "en-US";
@@ -23,7 +22,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var connexionButton: UIButton!
     @IBOutlet weak var inscriptionButton: UIButton!
-
+    @IBOutlet weak var deconnectionButton: UIButton!
+    @IBOutlet weak var informationButton: UIButton!
+    @IBOutlet weak var TestButton: UIButton!
 
     
     override func viewDidLoad() {
@@ -38,9 +39,20 @@ class ViewController: UIViewController {
     
     
     // MARK : Private functions
-    private func setupButtons() {
-        connexionButton.layer.cornerRadius = 20
+    fileprivate func buttonDesign(button: UIButton) {
+        button.layer.cornerRadius = 20
+        button.layer.borderWidth = 3
+        button.layer.borderColor = UIColor.orange.cgColor
+    }
     
+    private func setupButtons() {
+        if (connexionButton != nil) {
+            buttonDesign(button: connexionButton)
+        }
+        if (inscriptionButton != nil) {
+            buttonDesign(button: inscriptionButton)
+        }
+        
     }
     
     // MARK : Actions
@@ -89,25 +101,34 @@ class ViewController: UIViewController {
     }
     
     
-    //        myVoiceIt?.encapsulatedVoiceVerification(userId, contentLanguage: language, voicePrintPhrase: phrase, userVerificationCancelled: {
-    //            print("User Cancelled Verification");
-    //        }, userVerificationSuccessful: {(voiceConfidence, jsonResponse) in
-    //            print("User Verication Successful, voiceConfidence : \(voiceConfidence)")
-    //        }, userVerificationFailed: { (voiceConfidence, jsonResponse) in
-    //            print("User Verication Failed, voiceConfidence : \(voiceConfidence)")
-    //        })
-    
     @IBAction func showMessage(sender: UIButton) {
         let alertController = UIAlertController(title: "Welcome to our First App", message: "Hello ! It's Kenan and Fayçal !", preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         present(alertController, animated: true, completion: nil)
     }
 
+    fileprivate func swapViewController(identifier:String) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: identifier)
+        newViewController.modalTransitionStyle = .crossDissolve
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func displayConnectedPageAction(){
-        guard let vc = storyboard?.instantiateViewController(identifier: "connected_vc") as? ConnectedViewController else {
-            return 
-        }
-        present(vc, animated: true)
+        swapViewController(identifier: "connected_vc")
+    }
+    
+    @IBAction func displayRegistrationPage(){
+        swapViewController(identifier: "registration_vc")
+    }
+    
+    @IBAction func returnDisplayHomePage(){
+        swapViewController(identifier: "home_vc")
+    }
+    
+    @IBAction func displayInformationPage(){
+        swapViewController(identifier: "information_vc")
     }
     
 }

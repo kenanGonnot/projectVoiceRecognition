@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ConnectedViewController: UIViewController {
+class ConnectedViewController: ViewController {
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
