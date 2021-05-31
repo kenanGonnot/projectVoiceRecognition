@@ -8,11 +8,11 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
-
+import Foundation
 
 class RegistrationViewController: ViewController, UITextFieldDelegate {
-
-
+    
+    
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet weak var NextStepButton: UIButton!
@@ -24,50 +24,54 @@ class RegistrationViewController: ViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
-    private func create_VoiceIT_user(){
-        myVoiceIt?.createUser({
-            jsonResponse in
-            print("JSON RESPONSE: \(jsonResponse!)")
-        })
+    @IBAction func enrollment(){
+        UserDefaults.standard.set(UsernameTextField.text!, forKey: "username")
+        create_VoiceIT_userID()
     }
     
+    private func create_VoiceIT_userID(){
+        myVoiceIt?.createUser({
+            jsonResponse in
+            let data = Data(jsonResponse!.utf8)
+            let json = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let dictionary = json as? [String: Any] {
+                if let userID = dictionary["userId"] as? String {
+                    DispatchQueue.main.asyncAfter(deadline: .now(),
+                                                  execute: {
+                                                    self.save_user_voice(newUserID: userID)
+                                                  })
+                }
+            }
+        })
+    }
 
-    
-    
-    @IBAction func enrollment(){
-        //Auth.auth().createUser(withEmail: EmailTextField.text!, password: PasswordTextField.text!) { authResult, error in
-               // [START_EXCLUDE]
-          //       guard let user = authResult?.user, error == nil else {
-            //       print(error!.localizedDescription)
-            //       return
-            //     }
-            //     print("\(user.email!) created")
-            //     self.navigationController?.popViewController(animated: true)
-               // [END_EXCLUDE]
-            // }
-             // [END create_user]
-        let collection = Firestore.firestore().collection("utilisateurs")
-        let utilisateur = Utilisateurs(
-          username: UsernameTextField.text!,
-          email: EmailTextField.text!,
-          password: PasswordTextField.text!,
-          userID: "usr_0caa14ac5fb64ebdb32bcf515ed948c4"
-        )
-
-        myVoiceIt?.encapsulatedVoiceEnrollUser("usr_0caa14ac5fb64ebdb32bcf515ed948c4", contentLanguage: language, voicePrintPhrase: phrase, userEnrollmentsCancelled: {
+    fileprivate func save_user_voice(newUserID:String) {
+        myVoiceIt?.encapsulatedVoiceEnrollUser(newUserID, contentLanguage: language, voicePrintPhrase: phrase, userEnrollmentsCancelled: {
             print("ANNULERRRRRRR")
         }, userEnrollmentsPassed: {_ in
             DispatchQueue.main.asyncAfter(deadline: .now()+0.5,
                                           execute: {
                                             print("FONCTIONNE")
                                             self.dismiss(animated: true, completion: {
-                                                collection.addDocument(data: utilisateur.dictionary)
+                                                self.save_in_firestore(newUserID: newUserID)
                                                 self.displayConnectedPage(username: self.UsernameTextField.text!)
-                                                        })
                                             })
-
+                                          })
+            
         })
     }
+    
+    fileprivate func save_in_firestore(newUserID:String) {
+        let collection = Firestore.firestore().collection("utilisateurs")
+        let utilisateur = Utilisateurs(
+            username: UsernameTextField.text!,
+            email: EmailTextField.text!,
+            password: PasswordTextField.text!,
+            userID: newUserID
+        )
+        collection.addDocument(data: utilisateur.dictionary)
+    }
+    
     
     
     fileprivate func buttonDesign(button: UIButton) {
@@ -83,7 +87,7 @@ class RegistrationViewController: ViewController, UITextFieldDelegate {
         }
         
     }
-
+    
     
     private func setup1TextFieldManager() {
         UsernameTextField.delegate = self
@@ -115,7 +119,7 @@ class RegistrationViewController: ViewController, UITextFieldDelegate {
     var RegistrationViewController: UITextFieldDelegate{
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             textField.resignFirstResponder()
-         return true
+            return true
             
         }
         return 0 as! UITextFieldDelegate
