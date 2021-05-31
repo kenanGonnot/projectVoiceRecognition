@@ -9,12 +9,17 @@ import UIKit
 
 class ConnectedViewController: ViewController {
 
+    @IBOutlet weak var usernameLabel: UILabel!
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    
+    func setUsername(username:String){
+        usernameLabel.text = username
+    }
+    
     
 
 

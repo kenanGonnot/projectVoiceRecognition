@@ -13,7 +13,6 @@ import FirebaseFirestore
 class RegistrationViewController: ViewController, UITextFieldDelegate {
 
 
-    @IBOutlet weak var UsernameTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet weak var NextStepButton: UIButton!
@@ -57,14 +56,13 @@ class RegistrationViewController: ViewController, UITextFieldDelegate {
 
         myVoiceIt?.encapsulatedVoiceEnrollUser("usr_0caa14ac5fb64ebdb32bcf515ed948c4", contentLanguage: language, voicePrintPhrase: phrase, userEnrollmentsCancelled: {
             print("ANNULERRRRRRR")
-            self.displayConnectedPage()
         }, userEnrollmentsPassed: {_ in
             DispatchQueue.main.asyncAfter(deadline: .now()+0.5,
                                           execute: {
                                             print("FONCTIONNE")
                                             self.dismiss(animated: true, completion: {
                                                 collection.addDocument(data: utilisateur.dictionary)
-                                                self.displayConnectedPage()
+                                                self.displayConnectedPage(username: self.UsernameTextField.text!)
                                                         })
                                             })
 
@@ -104,8 +102,13 @@ class RegistrationViewController: ViewController, UITextFieldDelegate {
     
     @objc private func hideKeyboard(){
         UsernameTextField.resignFirstResponder()
-        EmailTextField.resignFirstResponder()
-        PasswordTextField.resignFirstResponder()
+        if EmailTextField != nil {
+            EmailTextField.resignFirstResponder()
+        }
+        
+        if PasswordTextField != nil {
+            PasswordTextField.resignFirstResponder()
+        }
     }
     
     

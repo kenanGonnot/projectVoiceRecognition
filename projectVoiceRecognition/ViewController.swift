@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var deconnectionButton: UIButton!
     @IBOutlet weak var informationButton: UIButton!
     @IBOutlet weak var TestButton: UIButton!
+    @IBOutlet weak var UsernameTextField: UITextField!
 
     
     override func viewDidLoad() {
@@ -60,7 +61,6 @@ class ViewController: UIViewController {
     // MARK : Actions
 
     
-    
 
     
     fileprivate func authenticateVoiceIt(userId:String) {
@@ -68,15 +68,20 @@ class ViewController: UIViewController {
             print("User Cancelled Verification");
         }, userVerificationSuccessful: {(voiceConfidence, jsonResponse) in
             print("User Verication Successful, voiceConfidence : \(voiceConfidence)")
-            self.displayConnectedPage()
+            self.displayConnectedPage(username: self.UsernameTextField.text!)
         }, userVerificationFailed: { (voiceConfidence, jsonResponse) in
             print("User Verication Failed, voiceConfidence : \(voiceConfidence)")
         })
     }
+
+    
+    
     
     @IBAction func verification(){
-    
-        let userList = Firestore.firestore().collection("utilisateurs").whereField("username", isEqualTo: username)
+        //UserDefaults.standard.set(UsernameTextField.text!, forKey: "username")
+        //let userName = UserDefaults.standard.string(forKey: "username")
+        let userList = Firestore.firestore().collection("utilisateurs").whereField("username", isEqualTo: UsernameTextField.text!)
+        //Firestore.firestore().collection("utilisateurs").whereField("username", isEqualTo: username)
         
         userList.getDocuments() { (querySnapshot, err) in
                 if let err = err {
@@ -85,6 +90,7 @@ class ViewController: UIViewController {
                     for document in querySnapshot!.documents {
                         print(document.get("userID")!)
                         self.authenticateVoiceIt(userId: document.get("userID") as! String)
+                        return
                     }
                 }
         }
@@ -116,7 +122,7 @@ class ViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    fileprivate func swapViewController(identifier:String) {
+    fileprivate func swapViewController(identifier:String) -> UIViewController {
         if let presented = self.presentedViewController {
             presented.removeFromParent()
         }
@@ -125,16 +131,17 @@ class ViewController: UIViewController {
         newViewController.modalTransitionStyle = .crossDissolve
         newViewController.modalPresentationStyle = .fullScreen
         self.present(newViewController, animated: true, completion: nil)
+        return newViewController
     }
     
-    @IBAction func displayConnectedPage(){
-        swapViewController(identifier: "connected_vc")
+    @IBAction func displayConnectedPage(username:String){
+        let newViewController = swapViewController(identifier: "connected_vc") as! ConnectedViewController
+        newViewController.setUsername(username: username)
     }
     
     @IBAction func displayLoginPage(){
         swapViewController(identifier: "login_vc")
     }
-    
     
     @IBAction func displayRegistrationPage(){
         swapViewController(identifier: "registration_vc")
