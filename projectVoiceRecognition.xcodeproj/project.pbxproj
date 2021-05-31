@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		162AD6D62F95C23F08FBA438 /* Pods_projectVoiceRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66611D235B5DC1A91967FCB4 /* Pods_projectVoiceRecognition.framework */; };
 		6E1BA575265A8E19007155B9 /* ConnectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1BA574265A8E19007155B9 /* ConnectedViewController.swift */; };
+		6E45D4642663EAF900BFC0D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E45D4632663EAF900BFC0D9 /* GoogleService-Info.plist */; };
+		6E45D4662663FD2700BFC0D9 /* Utilisateurs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E45D4652663FD2700BFC0D9 /* Utilisateurs.swift */; };
 		6E7061E4261270DB00B0CCE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7061E3261270DB00B0CCE5 /* AppDelegate.swift */; };
 		6E7061E6261270DB00B0CCE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7061E5261270DB00B0CCE5 /* SceneDelegate.swift */; };
 		6E7061E8261270DB00B0CCE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7061E7261270DB00B0CCE5 /* ViewController.swift */; };
@@ -16,11 +18,14 @@
 		6E7061ED261270DC00B0CCE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E7061EC261270DC00B0CCE5 /* Assets.xcassets */; };
 		6E75912B266143D4004E3F73 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E75912A266143D4004E3F73 /* LaunchScreenViewController.swift */; };
 		6E7591332662A2F3004E3F73 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7591322662A2F3004E3F73 /* RegistrationViewController.swift */; };
+		6E937E5A26651F930056B382 /* WBVoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E937E5926651F930056B382 /* WBVoiceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		66611D235B5DC1A91967FCB4 /* Pods_projectVoiceRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_projectVoiceRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1BA574265A8E19007155B9 /* ConnectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedViewController.swift; sourceTree = "<group>"; };
+		6E45D4632663EAF900BFC0D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6E45D4652663FD2700BFC0D9 /* Utilisateurs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilisateurs.swift; sourceTree = "<group>"; };
 		6E7061E0261270DB00B0CCE5 /* projectVoiceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projectVoiceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7061E3261270DB00B0CCE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E7061E5261270DB00B0CCE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		6E7061F1261270DC00B0CCE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E75912A266143D4004E3F73 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		6E7591322662A2F3004E3F73 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		6E937E5926651F930056B382 /* WBVoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBVoiceController.swift; sourceTree = "<group>"; };
 		B7F2208169D368F500BFBAB8 /* Pods-projectVoiceRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectVoiceRecognition.debug.xcconfig"; path = "Target Support Files/Pods-projectVoiceRecognition/Pods-projectVoiceRecognition.debug.xcconfig"; sourceTree = "<group>"; };
 		C12C46854D901BBE46F3E251 /* Pods-projectVoiceRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-projectVoiceRecognition.release.xcconfig"; path = "Target Support Files/Pods-projectVoiceRecognition/Pods-projectVoiceRecognition.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,11 +86,14 @@
 				6E7061E5261270DB00B0CCE5 /* SceneDelegate.swift */,
 				6E7061E7261270DB00B0CCE5 /* ViewController.swift */,
 				6E1BA574265A8E19007155B9 /* ConnectedViewController.swift */,
+				6E937E5926651F930056B382 /* WBVoiceController.swift */,
 				6E7061E9261270DB00B0CCE5 /* Main.storyboard */,
 				6E7061EC261270DC00B0CCE5 /* Assets.xcassets */,
 				6E7061F1261270DC00B0CCE5 /* Info.plist */,
+				6E45D4632663EAF900BFC0D9 /* GoogleService-Info.plist */,
 				6E75912A266143D4004E3F73 /* LaunchScreenViewController.swift */,
 				6E7591322662A2F3004E3F73 /* RegistrationViewController.swift */,
+				6E45D4652663FD2700BFC0D9 /* Utilisateurs.swift */,
 			);
 			path = projectVoiceRecognition;
 			sourceTree = "<group>";
@@ -109,6 +118,7 @@
 				6E7061DD261270DB00B0CCE5 /* Frameworks */,
 				6E7061DE261270DB00B0CCE5 /* Resources */,
 				37F166EC33E3D22A71461257 /* [CP] Copy Pods Resources */,
+				F1E02C2A91854A717B83606C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +168,7 @@
 			files = (
 				6E7061ED261270DC00B0CCE5 /* Assets.xcassets in Resources */,
 				6E7061EB261270DB00B0CCE5 /* Main.storyboard in Resources */,
+				6E45D4642663EAF900BFC0D9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +214,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F1E02C2A91854A717B83606C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-projectVoiceRecognition/Pods-projectVoiceRecognition-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-projectVoiceRecognition/Pods-projectVoiceRecognition-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-projectVoiceRecognition/Pods-projectVoiceRecognition-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -212,8 +240,10 @@
 			files = (
 				6E7591332662A2F3004E3F73 /* RegistrationViewController.swift in Sources */,
 				6E7061E8261270DB00B0CCE5 /* ViewController.swift in Sources */,
+				6E45D4662663FD2700BFC0D9 /* Utilisateurs.swift in Sources */,
 				6E7061E4261270DB00B0CCE5 /* AppDelegate.swift in Sources */,
 				6E1BA575265A8E19007155B9 /* ConnectedViewController.swift in Sources */,
+				6E937E5A26651F930056B382 /* WBVoiceController.swift in Sources */,
 				6E75912B266143D4004E3F73 /* LaunchScreenViewController.swift in Sources */,
 				6E7061E6261270DB00B0CCE5 /* SceneDelegate.swift in Sources */,
 			);
