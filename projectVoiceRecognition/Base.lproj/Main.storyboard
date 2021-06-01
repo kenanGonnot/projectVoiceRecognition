@@ -119,6 +119,7 @@
                             <constraint firstItem="Yi9-CN-qAX" firstAttribute="centerY" secondItem="Sm5-il-O2j" secondAttribute="centerY" id="BLa-O0-goV"/>
                             <constraint firstItem="Yi9-CN-qAX" firstAttribute="centerX" secondItem="Sm5-il-O2j" secondAttribute="centerX" id="CI9-Bs-aRS"/>
                             <constraint firstItem="Yi9-CN-qAX" firstAttribute="centerX" secondItem="Asi-My-RjG" secondAttribute="centerX" id="Czi-Cu-kyW"/>
+                            <constraint firstItem="yYg-zj-K8e" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6pO-CS-tBw" secondAttribute="trailing" symbolic="YES" id="Iv3-lr-DDi"/>
                             <constraint firstItem="Yi9-CN-qAX" firstAttribute="centerY" secondItem="Sm5-il-O2j" secondAttribute="centerY" id="b6k-Yj-Bfz"/>
                             <constraint firstItem="6Dt-mI-BTY" firstAttribute="top" secondItem="QbK-EV-xSb" secondAttribute="bottom" constant="8" symbolic="YES" id="chr-AF-6lQ"/>
                             <constraint firstItem="QbK-EV-xSb" firstAttribute="top" secondItem="K6q-f3-9Vj" secondAttribute="bottom" constant="8" symbolic="YES" id="ffy-fZ-lYv"/>
@@ -161,7 +162,7 @@
                                     <color key="titleColor" red="1" green="0.76758845659999997" blue="0.15102735519999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="verification" destination="VYV-RG-qjU" eventType="touchUpInside" id="ybf-Ks-Qd5"/>
+                                    <action selector="displayLoginPage" destination="VYV-RG-qjU" eventType="touchUpInside" id="Nwv-CN-UC4"/>
                                 </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnQ-NF-vBy">
