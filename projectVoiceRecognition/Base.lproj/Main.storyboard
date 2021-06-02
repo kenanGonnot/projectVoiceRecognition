@@ -187,7 +187,7 @@
                                 <rect key="frame" x="67.666666666666686" y="295" width="255" height="152"/>
                                 <subviews>
                                     <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URR-wn-ECZ">
-                                        <rect key="frame" x="7.3333333333333144" y="0.0" width="240" height="2"/>
+                                        <rect key="frame" x="7.3333333333333286" y="0.0" width="240" height="2"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="DJl-PS-Hbc"/>
@@ -195,7 +195,7 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TFk-5z-65F">
-                                        <rect key="frame" x="7.3333333333333144" y="6" width="240" height="40"/>
+                                        <rect key="frame" x="7.3333333333333286" y="6" width="240" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="L9T-uw-dYV"/>
                                             <constraint firstAttribute="width" constant="240" id="OI3-Ni-dhN"/>
@@ -205,7 +205,7 @@
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxt-dx-ORq">
-                                        <rect key="frame" x="7.3333333333333144" y="50" width="240" height="2"/>
+                                        <rect key="frame" x="7.3333333333333286" y="50" width="240" height="2"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="Zqa-90-QLp"/>
@@ -213,7 +213,7 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="E-mail" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7J9-k1-6Fr">
-                                        <rect key="frame" x="7.3333333333333144" y="56" width="240" height="40"/>
+                                        <rect key="frame" x="7.3333333333333286" y="56" width="240" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="8pe-wl-6wv"/>
                                             <constraint firstAttribute="height" constant="40" id="BKo-yu-uLu"/>
@@ -223,7 +223,7 @@
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RX5-YN-CBU">
-                                        <rect key="frame" x="7.3333333333333144" y="100" width="240" height="2"/>
+                                        <rect key="frame" x="7.3333333333333286" y="100" width="240" height="2"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="YUX-bI-CbR"/>
@@ -231,7 +231,7 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nJL-t4-A4e">
-                                        <rect key="frame" x="7.3333333333333144" y="106" width="240" height="40"/>
+                                        <rect key="frame" x="7.3333333333333286" y="106" width="240" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="gxm-q3-OIp"/>
                                             <constraint firstAttribute="height" constant="40" id="sHl-pF-LsY"/>
@@ -241,7 +241,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXa-hn-mx2">
-                                        <rect key="frame" x="7.3333333333333144" y="150" width="240" height="2"/>
+                                        <rect key="frame" x="7.3333333333333286" y="150" width="240" height="2"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="tPW-FA-vhh"/>
@@ -485,7 +485,7 @@
                                 <rect key="frame" x="67.666666666666686" y="395" width="255" height="52"/>
                                 <subviews>
                                     <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kP-ks-boO">
-                                        <rect key="frame" x="7.3333333333333144" y="0.0" width="240" height="2"/>
+                                        <rect key="frame" x="7.3333333333333286" y="0.0" width="240" height="2"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="1XA-cj-D9S"/>
@@ -493,7 +493,7 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9z7-Ah-NcD">
-                                        <rect key="frame" x="7.3333333333333144" y="6" width="240" height="40"/>
+                                        <rect key="frame" x="7.3333333333333286" y="6" width="240" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="6sW-RK-kxk"/>
                                             <constraint firstAttribute="width" constant="240" id="WEV-5s-hDV"/>
@@ -503,7 +503,7 @@
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Knq-Fx-849">
-                                        <rect key="frame" x="7.3333333333333144" y="50" width="240" height="2"/>
+                                        <rect key="frame" x="7.3333333333333286" y="50" width="240" height="2"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="hVR-ax-6S9"/>
